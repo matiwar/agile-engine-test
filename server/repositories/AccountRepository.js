@@ -1,17 +1,17 @@
-const Account = require('../model/Account');
+import Account  from '../model/Account';
 
 let account;
 
-createAccount = (name, balance) => {
+function createAccount (name, balance) {
   account = new Account(1, name, balance);
   return account;
 }
 
-getAccount = (id) => {
+function getAccount (id) {
   return account;
 }
 
-addTransaction = (transaction) => {
+function addTransaction (transaction) {
   account.addTransaction(transaction);
 
   return {

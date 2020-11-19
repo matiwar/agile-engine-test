@@ -1,4 +1,4 @@
-const AccountRepository = require('../repositories/AccountRepository');
+import AccountRepository from '../repositories/AccountRepository';
 
 module.exports = (req, res, next) => {
   const account = AccountRepository.getAccount(1);

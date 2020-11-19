@@ -1,0 +1,2 @@
+(this["webpackJsonpagile-engine"]=this["webpackJsonpagile-engine"]||[]).push([[0],{10:function(e,t,n){"use strict";n.r(t);var c=n(4),s=n(0),a=n(1),i=n.n(a),o=n(3),r=function(e){return console.log(e),Object(s.jsx)("div",{className:"app",children:Object(s.jsx)("h2",{children:"hello from app!"})})};n.n(o).a.hydrate(Object(s.jsx)(i.a.StrictMode,{children:Object(s.jsx)(r,Object(c.a)({},{name:"test"}))}),document.getElementById("root"))}},[[10,1,2]]]);
+//# sourceMappingURL=main.956fd538.chunk.js.map
