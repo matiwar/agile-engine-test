@@ -4,8 +4,8 @@
   
 ## How to run  
 
-- Local: `npm run start`
-- Binary: 
+- Local: `npm i && npm run start`
+- Binary: `npm run start`
   
 
 ## What I did
@@ -17,3 +17,4 @@
 - Use Sass
 - Feedback when a transaction succeed or fail
 - Validate amount before send it to the server
+- Production build process
