@@ -5,7 +5,7 @@
 ## How to run  
 
 - Local: `npm i && npm run start`
-- Binary: `npm run start`
+- Binary: `node server/index.js`
   
 
 ## What I did
