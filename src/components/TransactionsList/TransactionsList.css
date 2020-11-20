@@ -1,0 +1,20 @@
+.transaction .amount {
+    align-items: flex-end;
+}
+
+.transaction .type.CREDIT {
+    color: green;
+}
+
+.transaction .type.DEBIT {
+    color: red;
+}
+
+.transaction .MuiAccordionSummary-content {
+    justify-content: space-between;
+}
+
+.transactions-list .details {
+    display: flex;
+    flex-direction: column;
+}
