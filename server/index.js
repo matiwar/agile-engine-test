@@ -11,7 +11,7 @@ const router = express.Router()
 const initialState = {
   account: AccountRepository.getAccount(1),
 };
-console.log(initialState);
+
 const serverRenderer = (req, res, next) => {
   const { preloadedState, content }  = view(initialState)
   fs.readFile(path.resolve('./src/public/index.html'), 'utf8', (err, data) => {

@@ -1,0 +1,16 @@
+body {
+    background: #EEE;
+}
+
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+}
+
+.container .account-name {
+    margin-bottom: 0;
+}
+
+.container .balance {
+    font-size: 16px;
+}
