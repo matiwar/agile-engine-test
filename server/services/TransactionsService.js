@@ -1,16 +1,14 @@
-const AccountRepository = require('../repositories/AccountRepository');
-const Transaction = require('../model/Transaction');
+import AccountRepository from'../repositories/AccountRepository';
+import Transaction from '../model/Transaction';
 
-AccountRepository.createAccount('Test account', 0);
-
-getBalance = () => {
+function getBalance () {
   const account = AccountRepository.getAccount(1);
   return {
     balance: account.balance,
   };
 }
 
-getTransactions = () => {
+function getTransactions () {
   const account = AccountRepository.getAccount(1);
 
   return {
@@ -18,7 +16,7 @@ getTransactions = () => {
   };
 }
 
-addTransaction = (type, amount) => {
+function addTransaction (type, amount) {
   const account = AccountRepository.getAccount(1);
   account.changeLocked(true);
   try {

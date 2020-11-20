@@ -1,6 +1,6 @@
-const Router = require('co-router');
-const lock = require('../middlewares/lock');
-const TransactionsService = require('../services/TransactionsService');
+import Router from 'co-router';
+import lock from '../middlewares/lock';
+import TransactionsService from '../services/TransactionsService';
 
 const router = Router();
 

@@ -1,5 +1,5 @@
-const { createLogger, format, transports } = require('winston');
-const moment = require('moment');
+import { createLogger, format, transports } from 'winston';
+import moment from 'moment';
 
 const timestamp = () => moment().format('YYYY/MM/DD HH:mm:ss');
 
