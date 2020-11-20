@@ -7,7 +7,7 @@
 Local:
 `npm i && npm run start`. 
   
-- Binary:
+Binary:
 - `node server/index.js`
 - Navigate to http://localhost:3001
   
