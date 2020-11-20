@@ -4,8 +4,12 @@
   
 ## How to run  
 
-- Local: `npm i && npm run start`
-- Binary: `node server/index.js`
+Local:
+`npm i && npm run start`. 
+  
+- Binary:
+- `node server/index.js`
+- Navigate to http://localhost:3001
   
 
 ## What I did
