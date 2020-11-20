@@ -1,19 +1,21 @@
-import { REQUEST_APPS,  RECEIVE_APPS } from './actions';
+import { ADD_TRANSACTION } from './actions';
 
-function apps( state = {isFetching: false, apps: []}, action) {
+const accountReducer = (state = {}, action) => {
   switch (action.type) {
-    case REQUEST_APPS:
-      return Object.assign({}, state, {
-        isFetching: true
-      });
-    case RECEIVE_APPS:
-      return Object.assign({}, state, {
-        isFetching: false,
-        apps: action.apps
-      });
-    default:
-      return state
-  }
-}
+    case "ADD_TRANSACTION":
+      return {
+        ...state,
+      };
 
-export default apps
+    case "ADD_TRANSACTION_SUCCESS":
+      return {
+        ...state,
+        account: action.payload.account,
+      };
+
+    default:
+      return state;
+  }
+};
+
+export default accountReducer;

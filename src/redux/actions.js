@@ -1,43 +1,36 @@
 
-export const REQUEST_APPS = 'REQUEST_APPS'
-export const RECEIVE_APPS = 'RECEIVE_APPS'
+export const ADD_TRANSACTION = 'ADD_TRANSACTION';
+export const ADD_TRANSACTION_SUCCESS = 'ADD_TRANSACTION_SUCCESS';
 
-
-function requestApps() {
+function addTransactionSuccess(json) {
   return {
-    type: REQUEST_APPS
+    type: ADD_TRANSACTION_SUCCESS,
+    payload: json
   }
 }
 
-function receiveApps(json) {
-  return {
-    type: RECEIVE_APPS,
-    apps: json
-  }
-}
-
-function fetchApps() {
-  return dispatch => {
-    dispatch(requestApps())
-    return fetch(`assets/data.json`)
-      .then(response => response.json())
-      .then(json => dispatch(receiveApps(json)))
-  }
-}
-
-function shouldFetchApps(state) {
-  const apps = state.apps
-  if (apps.length==0) {
-    return true
-  } else if (state.isFetching) {
-    return false
-  }
-}
-
-export function fetchAppsIfNeeded() {
-  return (dispatch, getState) => {
-    if (shouldFetchApps(getState())) {
-      return dispatch(fetchApps())
+export function addTransaction(body) {
+  const request = {
+    method: 'POST',
+    body: JSON.stringify(body),
+    headers:{
+      'Content-Type': 'application/json'
     }
+  };
+
+  return dispatch => {
+    dispatch({
+      type: ADD_TRANSACTION,
+    });
+
+    return fetch(`/api/transactions`, request)
+      .then(response => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw Error(`Request rejected with status ${response.status}`);
+        }
+      })
+      .then(json => dispatch(addTransactionSuccess(json)));
   }
 }

@@ -24,7 +24,7 @@ function addTransaction (type, amount) {
     account.addTransaction(transaction);
     account.changeLocked(false);
     return {
-      transaction,
+      account,
     }
   } catch(err) {
     account.changeLocked(false);
